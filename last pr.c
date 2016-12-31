@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char a[100];
+	int l,i,j,m,n=0,b[20],k=0;
+	scanf("%s",&a);
+	l=strlen(a);
+	m=l/2;
+	if(l%2==0)
+	{
+		for(i=0;i<m;i++)
+		{
+			for(j=0;j<l;j++)
+			{
+				if(a[i]==a[j])
+				{
+					k++;
+				}	
+			}
+			b[n]=k;
+			k=0;
+			n++;
+		}
+	}
+	else
+	{
+		for(i=0;i<m+1;i++)
+		{
+			for(j=0;j<l;j++)
+			{
+				if(a[i]==a[j])
+				{
+					k++;
+				}	
+			}
+			b[n]=k;
+			k=0;
+			n++;
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		printf("%d",b[i]);
+	}
+}
